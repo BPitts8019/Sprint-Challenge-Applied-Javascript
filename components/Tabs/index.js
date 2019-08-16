@@ -7,3 +7,26 @@
 //
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
+
+
+
+/**
+ * A utility function for building components
+ * @param {string} tagName 
+ * @param {string} content 
+ * @param {string} className 
+ * @param {string} url 
+ */
+function buildElement (tagName, content = null, className = null, url = null) {
+   // create element
+   const tag = document.createElement(tagName);
+
+   //add properties
+   if (content) tag.textContent = content;
+   if (className) tag.classList.add(className);
+   if (url && tag.src !== undefined) tag.src = url;
+   if (url && tag.href !== undefined) tag.href = url;
+
+   //return element
+   return tag;
+}
