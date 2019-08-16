@@ -30,20 +30,30 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+DOM is an acronym that means Document Object model. It is an interface that allows JavaScript, and other programming languages, to interact with the HTML of a web page.
+
 2. What is an event?
+
+An event is something that is triggered as the result of something else happening in a web page. (e.g. a button click, the mouse moved over an element, or even a web page completed loading)
 
 3. What is an event listener?
 
+An event listener is a construct that waits for a specified event to happen. Once it does, the event listener will call an event handler; a set of code used to create the expected results of the given event.
+
 4. Why would we convert a NodeList into an Array?
+
+NodeLists are array-like objects in JavaScript. They have similar functionality and are iterable, but they don�t have all of the functionality that an Array does. If you want to use the map, reduce, or filter helper functions, then the NodeList will need to be converted to an Array before doing so.
 
 5. What is a component?
 
+A component is a group of HTML elements that are generated dynamically via JavaScript, or other programming languages, and added to the DOM. They are typically necessary when building a web page using data from a database or other sources.
+
 ### Git Set up
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-* [ ] You are now ready to build this project with your preferred IDE
+* [x] Fork the project into your GitHub user account
+* [x] Clone the forked project into a directory on your machine
+* [x] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+* [x] You are now ready to build this project with your preferred IDE
 
 ## Minimum Viable Product
 
