@@ -31,67 +31,67 @@ function buildElement (tagName, content = null, className = null, url = null) {
 
 function Tabs () {
    //Get data from API
-   // axios
-   //    .get("https://lambda-times-backend.herokuapp.com/topics")
-   //    .then(response => {
-   //       // console.log(JSON.stringify(response, null, 3));
-   //       // create elements
-   //       const topicsData = response.data.topics;
-   //       const topicsElement = document.querySelector(".topics");
-   //       const topics = topicsData.map(topic => buildElement("div", topic, "tab"));
-      
-   //       // attach children
-   //       topicsElement.append(...topics);
-   //    })
-   //    .catch(error => {
-   //       console.log("There was a problem while getting data from the server.");
-   //       console.log(error);
-   //    });
+   axios
+      .get("https://lambda-times-backend.herokuapp.com/topics")
+      .then(response => {
+         // console.log(JSON.stringify(response, null, 3));
+         // create elements
+         const topicsData = response.data.topics;
+         const topicsElement = document.querySelector(".topics");
+         const topics = topicsData.map(topic => buildElement("div", topic, "tab"));
+
+         // attach children
+         topicsElement.append(...topics);
+      })
+      .catch(error => {
+         console.log("There was a problem while getting data from the server.");
+         console.log(error);
+      });
 
 
-   const response = {
-      "data": {
-         "topics": [
-            "javascript",
-            "bootstrap",
-            "technology",
-            "jquery",
-            "node.js"
-         ]
-      },
-      "status": 200,
-      "statusText": "OK",
-      "headers": {
-         "content-type": "application/json; charset=utf-8",
-         "content-length": "69"
-      },
-      "config": {
-         "url": "https://lambda-times-backend.herokuapp.com/topics",
-         "method": "get",
-         "headers": {
-            "Accept": "application/json, text/plain, */*"
-         },
-         "transformRequest": [
-            null
-         ],
-         "transformResponse": [
-            null
-         ],
-         "timeout": 0,
-         "xsrfCookieName": "XSRF-TOKEN",
-         "xsrfHeaderName": "X-XSRF-TOKEN",
-         "maxContentLength": -1
-      },
-      "request": {}
-   };
+   // const response = {
+   //    "data": {
+   //       "topics": [
+   //          "javascript",
+   //          "bootstrap",
+   //          "technology",
+   //          "jquery",
+   //          "node.js"
+   //       ]
+   //    },
+   //    "status": 200,
+   //    "statusText": "OK",
+   //    "headers": {
+   //       "content-type": "application/json; charset=utf-8",
+   //       "content-length": "69"
+   //    },
+   //    "config": {
+   //       "url": "https://lambda-times-backend.herokuapp.com/topics",
+   //       "method": "get",
+   //       "headers": {
+   //          "Accept": "application/json, text/plain, */*"
+   //       },
+   //       "transformRequest": [
+   //          null
+   //       ],
+   //       "transformResponse": [
+   //          null
+   //       ],
+   //       "timeout": 0,
+   //       "xsrfCookieName": "XSRF-TOKEN",
+   //       "xsrfHeaderName": "X-XSRF-TOKEN",
+   //       "maxContentLength": -1
+   //    },
+   //    "request": {}
+   // };
 
-   // create elements
-   const topicsData = response.data.topics;
-   const topicsElement = document.querySelector(".topics");
-   const topics = topicsData.map(topic => buildElement("div", topic, "tab"));
+   // // create elements
+   // const topicsData = response.data.topics;
+   // const topicsElement = document.querySelector(".topics");
+   // const topics = topicsData.map(topic => buildElement("div", topic, "tab"));
 
-   // attach children
-   topicsElement.append(...topics);
+   // // attach children
+   // topicsElement.append(...topics);
 }
 
 // Initialize Tabs
