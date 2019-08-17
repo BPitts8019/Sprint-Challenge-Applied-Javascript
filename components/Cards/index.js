@@ -178,7 +178,8 @@ function buildCard (data) {
    });
 
    // attach children
-   document.body.append(...children);
+   const cardsContainer = document.querySelector(".cards-container");
+   cardsContainer.append(...children);
 }
 
 function buildAuthor (data) {
