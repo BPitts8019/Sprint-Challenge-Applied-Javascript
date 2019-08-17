@@ -42,7 +42,7 @@ An event listener is a construct that waits for a specified event to happen. Onc
 
 4. Why would we convert a NodeList into an Array?
 
-NodeLists are array-like objects in JavaScript. They have similar functionality and are iterable, but they don�t have all of the functionality that an Array does. If you want to use the map, reduce, or filter helper functions, then the NodeList will need to be converted to an Array before doing so.
+NodeLists are array-like objects in JavaScript. They have similar functionality and are iterable, but they don't have all of the functionality that an Array does. If you want to use the map, reduce, or filter helper functions, then the NodeList will need to be converted to an Array before doing so.
 
 5. What is a component?
 
