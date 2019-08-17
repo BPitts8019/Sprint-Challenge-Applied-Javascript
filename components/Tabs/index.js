@@ -95,6 +95,4 @@ function Tabs () {
 }
 
 // Initialize Tabs
-(() => {
-   Tabs();
-})();
+Tabs();

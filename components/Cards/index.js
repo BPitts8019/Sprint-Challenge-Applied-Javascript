@@ -208,6 +208,4 @@ function buildImage (url) {
 }
 
 // Initialize Articles
-(() => {
-   Cards();
-})();
+Cards();
