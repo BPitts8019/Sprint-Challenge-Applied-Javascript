@@ -172,9 +172,7 @@ function buildCard (data) {
    });
    let children = [];
    cardGroups.forEach(group => {
-      group.forEach(child => {
-         children.push(child);
-      });
+      children = children.concat(group);
    });
 
    // attach children
