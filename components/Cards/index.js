@@ -150,10 +150,12 @@ function Cards () {
 }
 
 function buildCard (data) {
-   //loop through articles
-   const categoriesList = Object.keys(data.articles);
-   const cardGroups = categoriesList.map(category => {
-      const articles = data.articles[category].map(article => {
+   const categories = Object.values(data.articles);
+   let children = [];
+   
+   //loop through categories and build each article
+   categories.forEach(category => {
+      const articles = category.map(article => {
          //create Elements
          const card = buildElement("div", null, "card");
          const children = [
@@ -168,11 +170,7 @@ function buildCard (data) {
          return card;
       });
 
-      return articles;
-   });
-   let children = [];
-   cardGroups.forEach(group => {
-      children = children.concat(group);
+      children = children.concat(articles);
    });
 
    // attach children
